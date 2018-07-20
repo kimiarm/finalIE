@@ -1,21 +1,21 @@
 <template>
   <div class="profileInfo">
 <div class="flex-container">
-  <div class="flex-item" style="">
+  <div class="flex-item">
 
       <p id="text">نام و نام‌خانوادگی</p>
-      <input id="input" type="text">
+      <input id="input" type="text" :placeholder="name">
       <p id="text">شماره تلفن همراه</p>
-      <input  id="input" type="text" pattern="[0-9]">
+      <input  id="input" type="text" pattern="[0-9]" :placeholder="mobile">
       <p id="text">تاریخ تولد</p>
-    <input type="date" id="input" max="1979-12-31">
+    <input type="date" id="input" max="1979-12-31" :placeholder="date.month/date.day/date.year">
     <p id="text">رمز عبور فعلی</p>
       <input id="input" type="text">
   </div>
     <div class="flex-item">
 
-    <p>نام کاربر</p>
-      <img class="avatar" src="https://file.digistyle.com/digistyle/Image/Webstore/Banner/1397/4/23/07a9ed68.jpg">
+    <p v-text="name"></p>
+      <img class="avatar" :src="avatar">
       <p id="text1" >رمز عبور جدید</p>
       <input id="input1" type="text">
     </div>
@@ -24,11 +24,11 @@
 
 
       <p id="text">شهر</p>
-      <input id="input" type="text">
+      <input id="input" type="text" :placeholder="city">
       <p id="text">شماره تلفن ثابت</p>
-      <input id="input" type="text">
+      <input id="input" type="text" :placeholder="phone">
       <p id="text">شماره کارت ۱۶ رقمی</p>
-      <input id="input" type="text">
+      <input id="input" type="text" :placeholder="card">
       <p id="text">تکرار رمز عبور جدید</p>
       <input id="input" type="text">
     </div>
@@ -45,17 +45,17 @@
     data () {
       return {
         name : 'نام کاربر',
-        mobile: '',
-        phone: '',
-        gender: '',
-        avatar: '',
-        city: '',
+        mobile: '09101111111',
+        phone: '0211111111',
+        gender: 'female',
+        avatar: 'https://file.digistyle.com/digistyle/Image/Webstore/Banner/1397/4/23/07a9ed68.jpg',
+        city: 'city',
         date : {
-          day: '',
-          month: '',
-          year: ''
+          day: '1',
+          month: '2',
+          year: '98'
         },
-        cart: ''
+        card: 'card'
       }
     }
   }
