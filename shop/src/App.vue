@@ -1,23 +1,30 @@
 <template>
   <div id="app">
 <headerr></headerr>
-<productDetails></productDetails>
-<footerr></footerr>
+    <ItemsinBasket></ItemsinBasket>
+    <footerr></footerr>
   </div>
 </template>
 
 
 
 <script>
-import Headerr from './components/headerr'
-import Footerr from './components/footerr'
-import ProductDetails from './components/productDetails'
+import Headerr from '../components/Headerr'
+import Footerr from '../components/Footerr'
+import ProgressBar from '../components/progressBar'
+import CategoryNav from "../components/CategoryNav"
+import ItemsinBasket from "../components/itemsinBasket";
+
+
+
+
 
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-  Headerr, Footerr,ProductDetails
+    CategoryNav,
+    Headerr, Footerr, ProgressBar, ItemsinBasket
   }
 }
 </script>
