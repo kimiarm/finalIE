@@ -2,8 +2,15 @@
   <div class="itemsInBasket">
 <br/>
     <br/>
-    <p class="title" style="width:939px;">&nbsp n</p>
-    مشخصات محصول  تعداد قیمت
+    <div class="title">
+
+      <div class="flex-container1">
+        <div class="flex-item1">مشخصات محصول</div>
+        <div class="flex-item1">تعداد</div>
+        <div class="flex-item1">قیمت</div>
+
+      </div>
+    </div>
 
 
     <div class="flex-container" v-for="item in items">
@@ -136,6 +143,21 @@
     border-right:none;
   }
 
+  .flex-container1 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width:1000px;
+    direction: rtl;
+  }
+
+  .flex-item1 {
+    height: 40px;
+    border: none;
+    width: 260px;
+    margin-top: 10px;
+  }
+
   .image{
     position: relative;
     width:100px;
@@ -221,13 +243,11 @@
   }
 
   .title{
-    display:inline-block;
-    height:40px;
-    border:none;
-    background-color: rgba(100,100,100,0.1);
-    margin: 0px;
-    left:25px;
-    position: relative;
+    background-color: rgba(100,100,100,0.4);
+    height: 40px;
+    width: 1000px;
+    display: block;
+    margin-left: 140px;
 
   }
 </style>
