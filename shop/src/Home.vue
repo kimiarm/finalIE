@@ -1,6 +1,7 @@
 <template>
   <div id="home">
 <headerr></headerr>
+<categoryNav></categoryNav>
 <category></category>
 <homeBottom></homeBottom>
 <footerr></footerr>
@@ -10,17 +11,19 @@
 
 
 <script>
-import Headerr from './components/headerr'
-import Footerr from './components/footerr'
-import Slider from './components/slider'
-import Category from './components/category'
-import HomeBottom from './components/homeBottom'
+import Headerr from '../components/Headerr'
+import Footerr from '../components/Footerr'
+import Slider from '../components/Slider'
+import Category from '../components/Category'
+import HomeBottom from '../components/HomeBottom'
+import CategoryNav from "../components/CategoryNav";
+
 
 
 export default {
   name: 'home',
   components: {
-  Headerr, Footerr, Slider, Category, HomeBottom
+  Headerr, Footerr, Slider, Category, HomeBottom, CategoryNav
   }
 }
 </script>
