@@ -8,20 +8,6 @@
       <font-awesome-icon icon="search" style="float: left; font-size:20px"/>
     </div>
 
-    <div class="flex-container4">
-  <div class="flex-item4">&nbsp<hr class="invisible"><hr></div>
-  <div class="flex-item4">&nbsp<hr class="invisible"><hr></div>
-  <div class="flex-item4">&nbsp<hr class="invisible"><hr></div>
-  <div class="flex-item4""><a class="a2">برندها</a><hr class="invisible a1"><hr></div>
-  <div class="flex-item4"><a class="a2">تخفیف</a><hr class="invisible a1"><hr></div>
-  <div class="flex-item4"><a class="a2">ورزشی</a><hr class="invisible a1"><hr></div>
-  <div class="flex-item4"><a class="a2">بچه‌گانه</a><hr class="invisible a1"><hr></div>
-  <div class="flex-item4"><a class="a2">زنانه</a><hr class="invisible a1"><hr></div>
-  <div class="flex-item4"><a class="a2">مردانه</a><hr class="invisible a1"><hr></div>
-  <div class="flex-item4">&nbsp<hr class="invisible"><hr></div>
-  <div class="flex-item4">&nbsp<hr class="invisible"><hr></div>
-  <div class="flex-item4">&nbsp<hr class="invisible"><hr></div>
-</div>
   </div>
 </template>
 
