@@ -2,6 +2,12 @@
   <div id="home">
     <headerr></headerr>
     <categoryNav></categoryNav>
+    <slider></slider>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <category></category>
     <homeBottom></homeBottom>
     <footerr></footerr>
@@ -17,7 +23,6 @@
   import Category from './components/Category'
   import HomeBottom from './components/HomeBottom'
   import CategoryNav from "./components/CategoryNav";
-
 
 
   export default {
