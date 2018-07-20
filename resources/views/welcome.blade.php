@@ -1,95 +1,100 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Laravel Vue CRUD Application</title>
+    <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="app">
+    <div class="d-flex flex-column">
+        <div class="d-flex flex-row justify-content-around">
+            <div class="d-flex flex-column align-content-around justify-content-end">
+                sdd
+                <div>
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+                    <input type="text" class="input-round11" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                 </div>
-            @endif
+                ds
+                <div class="input-group ">
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                    <input type="text" class="form-control rounded-0 " aria-label="Default" aria-describedby="inputGroup-sizing-default">
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                sdf
+                <div class="input-group">
+
+                    <input type="text" class="form-control rounded-0 " aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </div>
+            <div class="d-flex flex-column">
+
+                <img src="https://static.listionary.com/core/img/default-user.png" class="img-circle rounded-circle" alt="Cinque Terre" width="200" height="200">
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button>sds</button>
+                    <button>sds</button>
+                </div>
+            </div>
+
+
+
+            <div class="d-flex flex-column align-content-around justify-content-end">
+                sdd
+                <div>
+
+                    <input type="text" class="input-round11" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                ds
+                <div class="input-group ">
+
+                    <input type="text" class="form-control rounded-0 " aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+
+                sdf
+                <div class="input-group">
+
+                    <input type="text" class="form-control rounded-0 " aria-label="Default" aria-describedby="inputGroup-sizing-default">
                 </div>
             </div>
         </div>
-    </body>
+        <br>
+        <br>
+        <div class="d-flex flex-row justify-content-around">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="d-flex flex-row justify-content-center">
+            <button >ثبت تغییرات</button>
+        </div>
+    </div>
+    <div class="d-flex flex-row justify-content-end">
+        <div class="d-flex flex-column align-content-start" style="width: 20%" >
+
+            <div id="category" style="background-color: #1b6d85 ; " >
+دسته بندی ها
+            </div>
+            <div id="category" style="background-color: #1b6d85">
+                براساس برند
+
+            </div>
+            <div id="category" style="background-color: #1b6d85">
+                رنگ
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<script>
+</script>
+<script src="{{asset('js/app.js')}}"></script>
+</body>
 </html>

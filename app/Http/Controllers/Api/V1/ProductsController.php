@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Product ;
+use App\Transformers\ProductTransformer;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -15,7 +17,13 @@ class ProductsController extends Controller {
      */
     public function index()
     {
-        return Product::all();
+        $products = DB::table('products')
+                   ->join('product_colors', 'products.id', '=', 'product_colors.productID')
+                   ->select('products.*', 'product_colors.color')
+                   ->get();
+
+        return json_encode($products) ;
+
     }
 
     public function show($id){
@@ -23,6 +31,7 @@ class ProductsController extends Controller {
     }
     public function update(Request $request, $id)
     {
+        
         $product = Product::findOrFail($id);
         $product->update($request->all());
 

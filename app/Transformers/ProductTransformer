@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Transformers;
+
+use App\Product;
+
+/**
+ * Class UserTransformer
+ * @package App\Transformers
+ */
+class ProductTransformer extends  TransformerAbstract {
+
+    /**
+     * Transforms user object.
+     *
+     * @param User $user
+     *
+     * @return array
+     */
+    public function transform(Product $product)
+    {
+        return [
+            'id'          => $product->id,
+            'name'        => $product->name,
+            'description' => $product->description,
+            'isAvailable' => $product->isAvailable,
+            'price'       => $product->price,
+            'discount'    => $product->discount,
+        ];
+    }
+}
