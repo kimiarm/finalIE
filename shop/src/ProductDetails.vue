@@ -11,11 +11,11 @@
 
 
 <script>
-  import Headerr from '../components/Headerr'
-  import Footerr from '../components/Footerr'
+  import Headerr from './components/Headerr'
+  import Footerr from './components/Footerr'
   import ProductDetails from '../components/ProductDetails'
-  import Features from "../components/Features";
-  import CategoryNav from "../components/CategoryNav";
+  import Features from "./components/Features";
+  import CategoryNav from "./components/CategoryNav";
 
 
 
