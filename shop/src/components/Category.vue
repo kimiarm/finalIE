@@ -22,7 +22,37 @@
 <script>
 
 export default{
-name: 'categories'
+name: 'categories',
+  data(){
+  return{
+    banners : [
+      {
+        category: 'بچه‌گانه',
+        src: 'https://file.digistyle.com/digistyle/Image/Webstore/Banner/1397/4/23/07a9ed68.jpg'
+      },
+      {
+        category: 'زنانه',
+        src: 'https://file.digistyle.com/digistyle/Image/Webstore/Banner/1397/4/23/07a9ed68.jpg'
+      },
+      {
+        category: 'مردانه',
+        src: 'https://file.digistyle.com/digistyle/Image/Webstore/Banner/1397/4/23/07a9ed68.jpg'
+      }
+
+    ],
+    slider : [
+      {
+        src: 'https://file.digistyle.com/digistyle/Image/Webstore/Banner/1397/4/23/07a9ed68.jpg'
+      },
+      {
+        src: 'https://file.digistyle.com/digistyle/Image/Webstore/Banner/1397/4/23/07a9ed68.jpg'
+      },
+      {
+        src: 'https://file.digistyle.com/digistyle/Image/Webstore/Banner/1397/4/23/07a9ed68.jpg'
+      }
+    ]
+  }
+  }
 }
 </script>
 
