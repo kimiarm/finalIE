@@ -1,36 +1,55 @@
 <template>
   <div class="slider">
-    <v-app id="inspire">
-      <v-carousel>
-        <v-carousel-item
-          v-for="(item,i) in items"
-          :key="i"
-          :src="item.src"
-        ></v-carousel-item>
-      </v-carousel>
-    </v-app>
+    <br/>
+    <br/>
+    <div class="border">
+      <carousel >
+      <slide>
+<img :src="src" class="slider">
+      </slide>
+      <slide >
+        <img :src="src" class="slider">
+      </slide>
+      <slide>
+        <img :src="src" class="slider">
+      </slide>
+      <slide>
+        <img :src="src" class="slider">
+      </slide>
+      <slide>
+        <img :src="src" class="slider">
+      </slide>
+      <slide >
+        <img :src="src" class="slider">
+      </slide>
+      <slide>
+        <img :src="src" class="slider">
+      </slide>
+      <slide>
+        <img :src="src" class="slider">
+      </slide>
+
+
+    </carousel>
+    </div>
+
   </div>
 </template>
 
 <script>
+
+  import { Carousel, Slide } from 'vue-carousel';
+
+
   export default{
     name: 'slider',
+    components:Carousel,
+    Slide,
     data () {
       return {
-        items: [
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
-          }
-        ]
+
+            src: 'https://file.digistyle.com/digistyle/image/webstore/banner/1397/4/27/d6b6dd12_set1.jpg'
+
       }
     }
   }
@@ -38,6 +57,20 @@
 
 <style scoped>
 
+  .slider{
+    width: 1200px;
+    height: 300px;
+
+  }
+
+
+  .border{
+    width: 1050px;
+    height: 300px;
+    border: 1px solid gray;
+    margin-left: 100px;
+
+  }
   </style>
 
 
