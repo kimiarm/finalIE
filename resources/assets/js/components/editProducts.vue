@@ -5,38 +5,38 @@
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading">Edit company</div>
+            <div class="panel-heading">Edit Product</div>
             <div class="panel-body">
                 <form v-on:submit="saveForm()">
-                    <div class="row">
-                        <div class="col-xs-12 form-group">
-                            <label class="control-label">Company name</label>
-                            <input type="text" v-model="company.name" class="form-control">
+
+                        <div class=" form-group">
+                            <label class="control-label">Product name</label>
+                            <input type="text" v-model="product.name" class="form-control">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 form-group">
-                            <label class="control-label">Company address</label>
-                            <input type="text" v-model="company.address" class="form-control">
+
+
+                        <div class=" form-group">
+                            <label class="control-label">Product brand</label>
+                            <input type="text" v-model="product.brand" class="form-control">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 form-group">
-                            <label class="control-label">Company website</label>
-                            <input type="text" v-model="company.website" class="form-control">
+
+
+                        <div class=" form-group">
+                            <label class="control-label">Product price</label>
+                            <input type="text" v-model="product.price" class="form-control">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 form-group">
-                            <label class="control-label">Company email</label>
-                            <input type="text" v-model="company.email" class="form-control">
+
+
+                        <div class=" form-group">
+                            <label class="control-label">Product disscount</label>
+                            <input type="text" v-model="product.disscount" class="form-control">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 form-group">
+
+
+                        <div class=" form-group">
                             <button class="btn btn-success">Update</button>
                         </div>
-                    </div>
+
                 </form>
             </div>
         </div>
@@ -55,7 +55,7 @@
             axios.get('/api/v1/products/' + id)
                 .then(function (resp) {
                     app.product = resp.data;
-                    console.log(id)
+
                 })
                 .catch(function () {
                     alert(id)
@@ -63,26 +63,27 @@
         },
         data: function () {
             return {
-                companyId: null,
-                company: {
+                product: null,
+                product: {
                     name: '',
-                    address: '',
-                    website: '',
-                    email: '',
+                    brand: '',
+                    price: '',
+                    disscount: '',
                 }
             }
         },
         methods: {
             saveForm() {
                 var app = this;
-                var newCompany = app.company;
-                axios.patch('/api/v1/companies/' + app.companyId, newCompany)
+                var newProduct = app.product;
+                axios.patch('/api/v1/products/' + app.productId, newProduct)
                     .then(function (resp) {
-                        app.$router.replace('/');
+
+                    //    app.$router.replace('/');
                     })
                     .catch(function (resp) {
                         console.log(resp);
-                        alert("Could not create your company");
+
                     });
             }
         }

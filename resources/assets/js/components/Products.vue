@@ -1,6 +1,7 @@
 <template>
-    <div><h3>This shows that the route is really working!!</h3>
-        @{{ message }}
+    <div>
+        <router-link  class="btn btn-defualt" :to="{name: 'createProduct'}">Create New Product</router-link>
+        <br>
         <router-link to="/vue"><a>Back to the root</a></router-link>
         <div class="d-flex flex-column">
             <div class="d-flex flex-row justify-content-around">

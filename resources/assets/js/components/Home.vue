@@ -3,9 +3,9 @@
 
         <div class="d-flex flex-column" >
             <div class="d-flex flex-row justify-content-center">
-            <img :src="img" width="110" height="160"/>
+            <img :src="img" width="150" height="200"/>
 
-                <div v-text="disscount" class="rounded-circle" style="background-color: #cc2255 ;width: 20% ;height: 20% ; color:white" ></div>
+                <div v-text="disscount" class="rounded-circle" style="background-color: #cc2255 ;width: 20% ;height: 50% ; color:white" ></div>
             </div>
             <div class="d-flex flex-row justify-content-center">
                 <small v-text="brand"></small>
@@ -25,10 +25,10 @@
 </template>
 <script>
     export default {
-        props: ['brand' , 'name' , 'img' , 'price' , 'disscount'] ,
+        props: ['brand' , 'name' , 'src' , 'price' , 'disscount'] ,
         data () {
             return {
-
+                img : "../" + this.src
             };
         }
     };
