@@ -19,7 +19,8 @@ class ProductsController extends Controller {
     {
         $products = DB::table('products')
                    ->join('product_colors', 'products.id', '=', 'product_colors.productID')
-                   ->select('products.*', 'product_colors.color')
+                   ->join('product-img', 'products.id', '=', 'product-img.productID')
+                   ->select('products.*', 'product_colors.color' , 'product-img.src')
                    ->get();
 
         return json_encode($products) ;
